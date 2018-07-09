@@ -9,6 +9,8 @@ import UploadadapterPlugin from '@ckeditor/ckeditor5-adapter-ckfinder/src/upload
 import AutoformatPlugin from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import BoldPlugin from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import ItalicPlugin from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import StrikethroughPlugin from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import UnderlinePlugin from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import BlockquotePlugin from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import EasyimagePlugin from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import HeadingPlugin from '@ckeditor/ckeditor5-heading/src/heading';
@@ -20,6 +22,11 @@ import ImageuploadPlugin from '@ckeditor/ckeditor5-image/src/imageupload';
 import LinkPlugin from '@ckeditor/ckeditor5-link/src/link';
 import ListPlugin from '@ckeditor/ckeditor5-list/src/list';
 import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import TablePlugin from '@ckeditor/ckeditor5-table/src/table';
+import TabletoolbarPlugin from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import HighlightPlugin from '@ckeditor/ckeditor5-highlight/src/highlight';
+import FontPlugin from '@ckeditor/ckeditor5-font/src/font';
+import AlignmentPlugin from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -30,6 +37,8 @@ ClassicEditor.build = {
 		AutoformatPlugin,
 		BoldPlugin,
 		ItalicPlugin,
+		StrikethroughPlugin,
+		UnderlinePlugin,
 		BlockquotePlugin,
 		EasyimagePlugin,
 		HeadingPlugin,
@@ -40,32 +49,61 @@ ClassicEditor.build = {
 		ImageuploadPlugin,
 		LinkPlugin,
 		ListPlugin,
-		ParagraphPlugin
+		ParagraphPlugin,
+		TablePlugin,
+		TabletoolbarPlugin,
+		HighlightPlugin,
+		FontPlugin,
+		AlignmentPlugin
 	],
 	config: {
 		toolbar: {
 			items: [
 				'heading',
 				'|',
+				'fontSize',
+				'fontFamily',
+				'|',
 				'bold',
 				'italic',
-				'link',
+				'underline',
+				'strikethrough',
+				'highlight',
+				'|',
 				'bulletedList',
 				'numberedList',
-				'imageUpload',
+				'alignment',
+				'|',
+				'link',
 				'blockQuote',
+				'imageUpload',
+				'insertTable',
+				'|',
 				'undo',
 				'redo'
 			]
 		},
 		image: {
+			styles: [
+				'full',
+				'alignLeft',
+				'alignRight'
+			],
 			toolbar: [
+				'imageStyle:alignLeft',
 				'imageStyle:full',
-				'imageStyle:side',
+				'imageStyle:alignRight',
 				'|',
 				'imageTextAlternative'
 			]
 		},
-		language: 'en'
+		table: {
+			toolbar: [
+				'tableColumn',
+				'tableRow',
+				'mergeTableCells'
+			]
+		},
+		language: 'zh-cn'
 	}
 };
