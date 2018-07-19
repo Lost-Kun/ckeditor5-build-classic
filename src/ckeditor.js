@@ -83,6 +83,37 @@ ClassicEditor.build = {
 				'redo'
 			]
 		},
+		fontSize: {
+			options: [
+				9,
+				12,
+				14,
+				16,
+				18,
+				22,
+				26,
+				30,
+				36
+			]
+		},
+		fontFamily: {
+			options: [
+				'微软雅黑, "Microsoft YaHei", STXihei',
+				'宋体, SimSun, STSong',
+				'新宋体, NSimSun',
+				'仿宋, FangSong_GB2312, FangSong, STFangsong',
+				'楷体, KaiTi_GB2312, KaiTi, STKaiti',
+				'黑体, SimHei, STHeiti',
+				'Arial, Helvetica, sans-serif',
+				'Courier New, Courier, monospace',
+				'Georgia, serif',
+				'Lucida Sans Unicode, Lucida Grande, sans-serif',
+				'Tahoma, Geneva, sans-serif',
+				'Times New Roman, Times, serif',
+				'Trebuchet MS, Helvetica, sans-serif',
+				'Verdana, Geneva, sans-serif'
+			]
+		},
 		image: {
 			styles: [
 				'full',
